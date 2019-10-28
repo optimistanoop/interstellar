@@ -1,20 +1,18 @@
 {
-  "name": "electron-quick-start",
+  "name": "intersteller",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "'Intersteller' as this peace of code will be an interstellar to us which will reside in millions of computer systems (like stars in milky way).
+  One of the great feture of Intersteller is going to be to take care of itself as well as its objective in a different world called space (client infrastructure).",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "git@bitbucket.org:optimistanoop/interstellar.git",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Intersteller",
+    "wesense"
   ],
-  "author": "GitHub",
+  "author": "wesense",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^7.0.0"
