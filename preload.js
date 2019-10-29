@@ -1,15 +1,15 @@
 // All of the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
-import { autoUpdater } from "electron-updater"
-
-export default class AppUpdater {
-  constructor() {
-    const log = require("electron-log")
-    log.transports.file.level = "debug"
-    autoUpdater.logger = log
-    autoUpdater.checkForUpdatesAndNotify()
-  }
-}
+// const { autoUpdater } = require("electron-updater")
+//
+// export default class AppUpdater {
+//   constructor() {
+//     const log = require("electron-log")
+//     log.transports.file.level = "debug"
+//     autoUpdater.logger = log
+//     autoUpdater.checkForUpdatesAndNotify()
+//   }
+// }
 
 window.addEventListener('DOMContentLoaded', () => {
   const replaceText = (selector, text) => {

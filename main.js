@@ -11,6 +11,7 @@ let mainWindow
 
 function sendStatusToWindow(text) {
   log.info(text);
+  console.log('anp ', text)
   mainWindow.webContents.send('message', text);
 }
 
@@ -20,7 +21,6 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration:true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
