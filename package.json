@@ -4,9 +4,33 @@
 	"description": "Intersteller as this peace of code will be an interstellar to us which will reside in millions of computer systems (like stars in milky way).One of the great feture of Intersteller is going to be to take care of itself as well as its objective in a different world called space(client infrastructure).",
 	"main": "main.js",
 	"scripts": {
-		"start": "electron ."
+		"postinstall": "install-app-deps",
+		"start": "electron .",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"release": "build",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder"
 	},
-	"repository": "bitbucket.org/optimistanoop/interstellar",
+	"build": {
+		"appId": "ai.wesense.interstellar",
+		"files": [
+			"**/*",
+			"node_modules/**/*",
+			"package.json",
+			"*"
+		],
+		"icon": "./logo.ico",
+		"win": {
+			"publish": [
+				{
+					"provider": "github",
+					"owner": "optimistanoop",
+					"repo": "interstellar"
+				}
+			]
+		}
+	},
+	"repository": "https://github.com/optimistanoop/interstellar",
 	"keywords": [
 		"Intersteller",
 		"wesense"
@@ -14,6 +38,12 @@
 	"author": "wesense",
 	"license": "CC0-1.0",
 	"devDependencies": {
-		"electron": "^7.0.0"
+		"electron": "^7.0.0",
+		"electron-builder": "^21.2.0"
+	},
+	"dependencies": {
+		"electron-log": "^3.0.8",
+		"electron-updater": "^4.1.2",
+		"update-electron-app": "^1.5.0"
 	}
 }
