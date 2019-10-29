@@ -38,7 +38,8 @@ function createWindow () {
     mainWindow = null
   })
 
-  autoUpdater.checkForUpdatesAndNotify();
+  require('update-electron-app')()
+  //autoUpdater.checkForUpdatesAndNotify();
 
 }
 
