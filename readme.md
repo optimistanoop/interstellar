@@ -1,3 +1,6 @@
+[Environment]::SetEnvironmentVariable("GH_TOKEN","5569eea0650c8aed5c0ebb660c912861500b98b1","User")
+
+
 # Interstellar
 
 As this peace of code will be an interstellar to us which will reside in millions of computer systems (like stars in milky way). One of the great feature of interstellar is going to be to take care of itself as well as its objective in a different world called space (client infrastructure).

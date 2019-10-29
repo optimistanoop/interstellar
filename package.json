@@ -9,7 +9,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"release": "build",
 		"pack": "electron-builder --dir",
-		"dist": "electron-builder"
+		"dist": "electron-builder",
+		"publish": "build -p always"
 	},
 	"build": {
 		"appId": "ai.wesense.interstellar",
