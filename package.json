@@ -1,9 +1,9 @@
 {
-	"name": "interstellar",
-	"version": "1.1.1",
-	"description": "Intersteller as this peace of code will be an interstellar to us which will reside in millions of computer systems (like stars in milky way).One of the great feture of Intersteller is going to be to take care of itself as well as its objective in a different world called space(client infrastructure).",
-	"main": "main.js",
-	"scripts": {
+  "name": "interstallar",
+  "version": "1.1.1",
+  "description": "Intersteller as this peace of code will be an interstellar to us which will reside in millions of computer systems (like stars in milky way).One of the great feture of Intersteller is going to be to take care of itself as well as its objective in a different world called space(client infrastructure).",
+  "main": "main.js",
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "electron-builder build --win --publish never",
     "deploy": "electron-builder build --win --publish always",
