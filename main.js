@@ -14,8 +14,19 @@ function createWindow () {
     },
   });
   mainWindow.loadFile('index.html');
+
   mainWindow.on('closed', function () {
     mainWindow = null;
+  });
+
+  mainWindow.on('close', function (event) {
+    event.preventDefault();
+    mainWindow.hide();
+  });
+  
+  mainWindow.on('minimize', function (event) {
+    event.preventDefault();
+    mainWindow.hide();
   });
 }
 
