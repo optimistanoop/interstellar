@@ -23,7 +23,7 @@ function createWindow () {
     event.preventDefault();
     mainWindow.hide();
   });
-  
+
   mainWindow.on('minimize', function (event) {
     event.preventDefault();
     mainWindow.hide();
@@ -36,7 +36,6 @@ app.on('ready', () => {
   tray = new Tray('logo.png')
   tray.setToolTip('wesense')
   tray.on('click', (d)=>{
-    console.log('anp tray', d);
     if(mainWindow.isVisible()){
       mainWindow.hide()
     }else{
