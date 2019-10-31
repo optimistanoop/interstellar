@@ -1,13 +1,14 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, Tray } = require('electron');
 const { autoUpdater } = require('electron-updater');
 
-
+let tray;
 let mainWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 320,
+    height: 568,
+    show:false,
     webPreferences: {
       nodeIntegration: true,
     },
@@ -21,7 +22,16 @@ function createWindow () {
 app.on('ready', () => {
   createWindow();
   autoUpdater.checkForUpdatesAndNotify();
-
+  tray = new Tray('logo.png')
+  tray.setToolTip('wesense')
+  tray.on('click', (d)=>{
+    console.log('anp tray', d);
+    if(mainWindow.isVisible()){
+      mainWindow.hide()
+    }else{
+      mainWindow.show()
+    }
+  })
 });
 
 app.on('window-all-closed', function () {
